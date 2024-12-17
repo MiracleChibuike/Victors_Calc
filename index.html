@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Dancing+Script&family=Jost&family=Kalam&family=Kanit&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Yesteryear&display=swap');
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Syne", serif;
+            /* font-family: "Playwrite ZA Guides", cursive; */
+        }
+
+        .main {
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
+            background: #f5f5f5;
+        }
+
+        .calc_Body {
+            box-shadow: 0 0 20px #050505;
+            border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+        }
+
+        #input_Show {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 40px 10px;
+            background: rgb(200, 200, 200, 0.3);
+        }
+
+        .calCulator_Body {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 35px;
+            padding: 20px 20px 15px 20px;
+            /* background: #fff; */
+            border-bottom-right-radius: 10px;
+
+        }
+
+        .Operator {
+            color: #50af30;
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .Operator_C {
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: #f90707;
+            padding: 5px;
+            width: 40px;
+            height: 40px;
+
+        }
+
+        .Operator_Equal {
+            background: #50af30;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            grid-column-start: 3;
+            grid-column-end: 5;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .number {
+            color: #000;
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            padding: 5px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .number:focus {
+            border-radius: 50%;
+            background: #000;
+            opacity: .5;
+            color: #fff;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .Operator:hover {
+            border: 1px solid #383737;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="calc_Body">
+            <input type="text" id="input_Show" readonly>
+            <div class="calCulator_Body">
+                <button class="Operator_C">C</button>
+                <button class="Operator">%</button>
+                <button class="Operator">x</button>
+                <button class="Operator">&divide;</button>
+                <button class="number">7</button>
+                <button class="number">8</button>
+                <button class="number">9</button>
+                <button class="Operator">X</button>
+                <button class="number">4</button>
+                <button class="number">5</button>
+                <button class="number">6</button>
+                <button class="Operator">-</button>
+                <button class="number">1</button>
+                <button class="number">2</button>
+                <button class="number">3</button>
+                <button class="Operator">+</button>
+                <button class="number">0</button>
+                <button class="number">.</button>
+                <button class="Operator_Equal">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
